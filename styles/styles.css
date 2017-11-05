@@ -1,3 +1,7 @@
 .array__item:first-child {
     border-right: 1px solid blue;
 }
+
+.string-fieldset > .row {
+    padding: 10px;
+}

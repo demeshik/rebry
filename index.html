@@ -2,13 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Rebry Lisa</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
     <link href="styles/styles.css" rel="stylesheet" />
+    <script src="scripts/main.js" type="text/javascript"></script>
 </head>
 <body>
     <div class="container">
         <div class="row">
+
+            <fieldset class="string-fieldset">
+                <legend>Infinite string</legend>
+
+                <div class="row">
+                    <label for="stringLengthInput">Input length of string: </label>
+                    <input class="form-control" id="stringLengthInput" type="text" /> <button id="stringGenBut">Generate string</button>
+                </div>
+
+                <div class="row">
+                    <textarea class="form-control" id="stringOutput" disabled></textarea>
+                </div>
+
+                <div id="requiredNumber" class="row">
+                    <label for="requiredIndex">Input required index: </label>
+                    <input class="form-control" id="requiredIndex" type="text" />
+
+                    <input type="radio" name="getItemByIndex" value="1" /> Get Item (version #1) <br />
+                    <input type="radio" name="getItemByIndex" value="2" /> Get Item (version #2)
+                </div>
+            </fieldset>
+
+        </div>
+
+        <!-- <div class="row">
             <div class="col-md-6 array__item">
                 <label for="firstArray">Input first array items(use comma (,) for splitting): </label>
                 <input class="form-control" id="firstArray" type="text" />
@@ -18,7 +44,7 @@
                 <label for="secondArray">Input second array items(use comma (,) for splitting): </label>
                 <input class="form-control" id="secondArray" type="text" />
             </div>
-        </div>
+        </div> -->
     </div>
 </body>
 </html>
