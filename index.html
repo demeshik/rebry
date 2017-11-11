@@ -10,13 +10,13 @@
 <body>
     <div class="container">
         <div class="row">
-
             <fieldset class="string-fieldset">
                 <legend>Infinite string</legend>
 
                 <div class="row">
                     <label for="stringLengthInput">Input length of string: </label>
-                    <input class="form-control" id="stringLengthInput" type="text" /> <button id="stringGenBut">Generate string</button>
+                    <input class="form-control" id="stringLengthInput" type="text" />
+                    <button id="stringGenBut" class="btn">Generate string</button>
                 </div>
 
                 <div class="row">
@@ -31,20 +31,30 @@
                     <input type="radio" name="getItemByIndex" value="2" /> Get Item (version #2)
                 </div>
             </fieldset>
-
         </div>
 
-        <!-- <div class="row">
-            <div class="col-md-6 array__item">
-                <label for="firstArray">Input first array items(use comma (,) for splitting): </label>
-                <input class="form-control" id="firstArray" type="text" />
-            </div>
+        <div class="row">
+            <fieldset class="array-fieldset">
+                <legend>Array difference</legend>
 
-            <div class="col-md-6 array__item">
-                <label for="secondArray">Input second array items(use comma (,) for splitting): </label>
-                <input class="form-control" id="secondArray" type="text" />
-            </div>
-        </div> -->
+                <div class="row">
+                    <div class="col-md-6 array__item">
+                        <label for="firstArray">Input first array items(use comma (,) for splitting): </label>
+                        <input class="form-control" id="firstArray" type="text" />
+                    </div>
+
+                    <div class="col-md-6 array__item">
+                        <label for="secondArray">Input second array items(use comma (,) for splitting): </label>
+                        <input class="form-control" id="secondArray" type="text" />
+                    </div>
+                </div>
+                <button id="displayButArrays" class="btn">Show arrays</button> <br/>
+
+                <pre id="showFieldArrays"></pre>
+                <button id="differenceButArrays" class="btn">Create arrays differenct</button> <br/>
+                <pre id="differenceArrays"></pre>
+            </fieldset>
+        </div>
     </div>
 </body>
 </html>

@@ -7,8 +7,15 @@ function fieldsState(state) {
     $('#requiredNumber').css('display', state);
 }
 
+function arraysFieldsState(state) {
+    $('#showFieldArrays').css('display', state);
+    $('#differenceButArrays').css('display', state);
+    $('#differenceArrays').css('display', state);
+}
+
 $(document).ready(() => {
     fieldsState('none');
+    arraysFieldsState('none');
 
     $('#stringGenBut').click(() => {
         if (!InfiniteString.isStringIsNumber($('#stringLengthInput').val())) {
@@ -39,4 +46,19 @@ $(document).ready(() => {
         }
     });
 
+    $('#displayButArrays').click(() => {
+        let firstArray = JSON.parse(`[${$('#firstArray').val()}]`);
+        let secondArray = JSON.parse(`[${$('#secondArray').val()}]`);
+
+        $('#showFieldArrays').html(`${JSON.stringify(firstArray)} | ${JSON.stringify(secondArray)}`);
+        arraysFieldsState('block');
+    });
+
+    $('#differenceButArrays').click(() => {
+        let firstArray = JSON.parse(`[${$('#firstArray').val()}]`);
+        let secondArray = JSON.parse(`[${$('#secondArray').val()}]`);
+
+        let diffArray = ArrayDifference.difference(firstArray, secondArray);
+        $('#differenceArrays').html(JSON.stringify(diffArray));
+    })
 });
